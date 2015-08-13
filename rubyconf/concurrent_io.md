@@ -8,7 +8,7 @@ Fundamentals
 
 This is a presentation on a few approaches you can use to simultaneously
 interact with multiple services that are required to produce output from your
-Ruby application to speed things up.
+Ruby application in order to speed things up.
 
 ## Description
 
