@@ -6,26 +6,53 @@ Fundamentals
 
 ## Abstract
 
-This is a presentation on a few approaches you can use to simultaneously
-interact with multiple services that are required to produce output from your
-Ruby application in order to speed things up.
+This is a presentation on a few approaches you can use to speed
+things up by simultaneously interfacing with multiple services
+that are required to produce output in your Ruby application.
 
-## Description
+## Details
 
-For this presentation, I'll assume that you know some Ruby, that you
-are at least familiar with the terminology of threads, services, and concurrent
-programming, and that you want to make your application or web site
-much, much faster.
+For this presentation, I'll assume that you know some Ruby, that
+you are at least familiar with the terminology of threads, services,
+and concurrent programming, and that you want to make your
+application or web site much, much faster.
 
-I had a mission at my company, and that was to increase the speed of
-our Sinatra application.  SEO implications were at stake!  At the
-time, we were querying multiple web services (NoSQL services), and we
-were doing them one after another.  What a shame...
+I had a mission at my company, and that was to increase the
+speed of our Sinatra application. SEO implications were at stake!
+At the time, we were querying multiple web services (NoSQL services),
+and we were doing them one after another. What a shame...
 
-I wandered down multiple roads during this journey.  I looked at Threads,
-Fibers, Eventmachine, and Curl::Multi.  This talk will touch on the pros and
-cons of each approach while running within a Ruby application server.
+I wandered down multiple roads during this journey. I looked at
+Threads, Fibers, Eventmachine, and Curl::Multi. This talk will
+touch on the pros and cons of each approach while running within
+a Ruby application server.
 
-Mission accomplished!  Our site is much faster now.  Let me show you
-the lessons learned and circumstances where you'd want to use each of
-them.
+Mission accomplished! Our site is much faster now. Let me show you
+the lessons learned and circumstances where you'd want to use each of them.
+
+General outline:
+- Threads
+  - MRI considerations
+    - timeslicing
+    - GIL
+  - Can execute code while waiting on requests
+- Reactor Pattern
+  - Eventmachine
+    - Only one event loop per process
+    - Recommended separate thread in applications
+      - Lose a lot of gains due to timeslicing in MRI
+  - Fibers
+  - can execute code while waiting on requests
+- Curl::Multi (via the Curb gem)
+  - uses lightning-fast curl c library
+  - can't execute any other code while waiting
+  - can only do http requests
+- Trade-off discussion
+
+## Pitch
+
+Most companies and developers desire a site that is fast and responsive.
+There are lots of ways to approach this, and I've taken a deep-dive
+into several of them, as I was given a lot of research latitude in
+order to improve performance.  Our site was slow, and we needed to
+speed things up.
