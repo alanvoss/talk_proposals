@@ -12,19 +12,16 @@ better?
 
 ## Description
 
-Do you think regular expressions are black magic?  Have you ever
-considered making them a larger part of your Ruby tool belt?  Do you
-do a lot of string manipulation?  Any developer with beginning to
-intermediate regular expression knowledge would likely benefit in
-knowing how it all works, how you can improve your expressions to be
-more readable and predictable, and how you can have fun by exploring
-this (not so ancient) art.
+Do you think regular expressions are black magic?  Have you ever
+considered making them a larger part of your Ruby (or Vim, Javascript, etc.)
+tool belt?  Do you do a lot of string manipulation?
 
-In this discussion, I'll show you the basics of how a regular
-expression engine functions, when to use it (and as importantly, when
-not to do so), and some tricks you can employ (hopefully mostly
-non-production ones) to get things finished quickly.
+Any developer with beginning to intermediate regular expression knowledge
+would likely benefit in knowing how it all works, how you can improve your
+expressions to be more readable and predictable, and how you can have fun
+by exploring this (not so ancient) art.
 
-I'll also show some differences between how Perl's regex engine does
-things (the predominant language I used prior to Ruby) and how Ruby's
-does them differently.
+In this discussion, I'll show you the basics of how a regular expression engine
+generally functions, when to use it (and as importantly, when not to do so), and
+some tricks you can employ (hopefully mostly non-production ones) to get thing
+finished quickly.
