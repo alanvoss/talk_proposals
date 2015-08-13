@@ -1,4 +1,4 @@
-# Keeping Your Site Responsive By Offloading I/O
+# Keeping Your Site Responsive by Offloading I/O
 
 ## Track?
 
