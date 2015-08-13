@@ -14,7 +14,7 @@ better?
 
 Do you think regular expressions are black magic?  Have you ever
 considered making them a larger part of your Ruby (or Vim, Javascript, etc.)
-tool belt?  Do you do a lot of string manipulation?
+tool belt?  Do you do a lot of string manipulation, parsing, or searching?
 
 Any developer with beginning to intermediate regular expression knowledge
 would likely benefit in knowing how it all works, how you can improve your
