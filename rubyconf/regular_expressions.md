@@ -1,14 +1,16 @@
-Mastering Regular Expressions from a Perl Guy
+# Mastering Regular Expressions from a Perl Guy
 
-Track?: Beyond Ruby (because this isn't really limited to Ruby) or Fundamentals
+## Track?
 
-Abstract
+Beyond Ruby (because this isn't really limited to Ruby) or Fundamentals
+
+## Abstract
 
 Ever cared to know what is happening behind-the-scenes with your
 regular expression engine, or how you can make your expressions
 better?
 
-Description
+## Description
 
 Do you think regular expressions are black magic?  Have you ever
 considered making them a larger part of your Ruby tool belt?  Do you
