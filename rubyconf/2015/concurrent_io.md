@@ -6,9 +6,10 @@ Fundamentals
 
 ## Abstract
 
-This is a presentation on a few approaches you can use to speed
-things up by simultaneously interfacing with multiple services
-that are required to produce output in your Ruby application.
+Feeling like your Ruby application could use a speed boost?
+Sometimes, the hare does beat the tortoise.  We'll look at interfacing 
+with external services via Threads, Fibers/EventMachine, and Curl::Multi,
+and reasons for using each of them to help win the race.
 
 ## Details
 
@@ -31,23 +32,23 @@ Mission accomplished! Our site is much faster now. Let me show you
 the lessons learned and circumstances where you'd want to use each of them.
 
 General outline:
-- Threads
+1. Threads
   - MRI considerations
     - timeslicing
     - GIL
   - Can execute code while waiting on requests
-- Reactor Pattern
+2. Reactor Pattern
   - Eventmachine
     - Only one event loop per process
     - Recommended separate thread in applications
       - Lose a lot of gains due to timeslicing in MRI
   - Fibers
   - can execute code while waiting on requests
-- Curl::Multi (via the Curb gem)
+3. Curl::Multi (via the Curb gem)
   - uses lightning-fast curl c library
   - can't execute any other code while waiting
   - can only do http requests
-- Trade-off discussion
+4. Trade-off discussion
 
 ## Pitch
 
